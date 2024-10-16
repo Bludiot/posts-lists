@@ -1,0 +1,15 @@
+.posts-list-heading {
+  margin: var(--posts-lists--item--heading--margin, var(--posts-lists--item--heading--margin-top, 0.625em) 0 var(--posts-lists--item--heading--margin-bottom, 0.325em) 0);
+  padding: var(--posts-lists--item--heading--padding, 0);
+  font-family: var(--posts-lists--item--heading--font-family, inherit);
+  font-size: var(--posts-lists--item--heading--font-size, 1em);
+  font-weight: var(--posts-lists--item--heading--font-weight, 600);
+  font-style: var(--posts-lists--item--heading--font-style, normal);
+  font-variant: var(--posts-lists--item--heading--font-variant, normal);
+  -webkit-text-decoration: var(--posts-lists--item--heading--text-decoration, none);
+          text-decoration: var(--posts-lists--item--heading--text-decoration, none);
+  text-transform: var(--posts-lists--item--heading--text-transform, none);
+  letter-spacing: var(--posts-lists--item--heading--letter-spacing, normal);
+  word-spacing: var(--posts-lists--item--heading--word-spacing, normal);
+  line-height: var(--posts-lists--item--heading--line-height, inherit);
+}
