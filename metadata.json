@@ -1,10 +1,12 @@
 {
-	"author": "Bludiot",
-	"email": "",
-	"website": "https://github.com/Bludiot/posts-lists",
-	"version": "1.0.0",
-	"releaseDate": "",
-	"license": "",
-	"compatible": "3.15.0",
-	"notes": ""
+	"author"       : "Bludiot",
+	"email"        : "",
+	"website"      : "https://github.com/Bludiot/posts-lists",
+	"version"      : "1.0.0",
+	"releaseDate"  : "",
+	"license"      : "",
+	"compatible"   : "3.16.0",
+	"notes"        : "",
+	"theme_desc"   : "The Posts Lists plugin adds a customizable list of blog posts to the site sidebar. Options include a dropdown select box and post limit. The active theme may also add posts to the 404 error page.",
+	"theme_compat" : [ "configureight" ]
 }
