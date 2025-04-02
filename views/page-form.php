@@ -33,7 +33,7 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . $this->className();
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="in_sidebar"><?php echo ucwords( $L->get( 'Sidebar List' ) ); ?></label>
 		<div class="col-sm-10">
-			<select class="form-select" id="in_sidebar" name="in_sidebar">
+			<select id="in_sidebar" class="form-select" name="in_sidebar">
 				<option value="true" <?php echo ( $this->getValue( 'in_sidebar' ) === true ? 'selected' : '' ); ?>><?php $L->p( 'Enabled' ); ?></option>
 
 				<option value="false" <?php echo ( $this->getValue( 'in_sidebar' ) === false ? 'selected' : '' ); ?>><?php $L->p( 'Disabled' ); ?></option>
@@ -81,7 +81,7 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . $this->className();
 		<div class="form-field form-group row">
 			<label class="form-label col-sm-2 col-form-label" for="show_dates"><?php echo ucwords( $L->get( 'Show Dates' ) ); ?></label>
 			<div class="col-sm-10">
-				<select class="form-select" id="show_dates" name="show_dates">
+				<select id="show_dates" class="form-select" name="show_dates">
 					<option value="show" <?php echo ( $this->getValue( 'show_dates' ) === 'show' ? 'selected' : '' ); ?>><?php $L->p( 'Show' ); ?></option>
 
 					<option value="hide" <?php echo ( $this->getValue( 'show_dates' ) === 'hide' ? 'selected' : '' ); ?>><?php $L->p( 'Hide' ); ?></option>
@@ -93,7 +93,7 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . $this->className();
 		<div id="date_display_wrap" class="form-field form-group row" style="display: <?php echo ( $this->getValue( 'show_dates' ) === 'show' ? 'flex' : 'none' ); ?>;">
 			<label class="form-label col-sm-2 col-form-label" for="date_display"><?php echo ucwords( $L->get( 'Date Display' ) ); ?></label>
 			<div class="col-sm-10">
-				<select class="form-select" id="date_display" name="date_display">
+				<select id="date_display" class="form-select" name="date_display">
 					<option value="headings" <?php echo ( $this->getValue( 'date_display' ) === 'headings' ? 'selected' : '' ); ?>><?php $L->p( 'List with Headings' ); ?></option>
 
 					<option value="select" <?php echo ( $this->getValue( 'date_display' ) === 'select' ? 'selected' : '' ); ?>><?php $L->p( 'Dropdown Select' ); ?></option>
@@ -105,7 +105,7 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . $this->className();
 		<div id="date_code_wrap" class="form-field form-group row" style="display: <?php echo ( $this->getValue( 'show_dates' ) === 'show' ? 'flex' : 'none' ); ?>;">
 			<label class="form-label col-sm-2 col-form-label" for="date_code"><?php echo ucwords( $L->get( 'Date Format' ) ); ?></label>
 			<div class="col-sm-10">
-				<select class="form-select" id="date_code" name="date_code">
+				<select id="date_code" class="form-select" name="date_code">
 					<option value="F Y" <?php echo ( $this->getValue( 'date_code' ) === 'F Y' ? 'selected' : '' ); ?>><?php echo date( 'F Y' ); ?></option>
 
 					<option value="Y F" <?php echo ( $this->getValue( 'date_code' ) === 'Y F' ? 'selected' : '' ); ?>><?php echo date( 'Y F' ); ?></option>
