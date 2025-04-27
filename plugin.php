@@ -93,6 +93,11 @@ class Posts_Lists extends Plugin {
 			'date_code'    => 'F Y'
 		];
 
+		// Array of custom hooks.
+		$this->customHooks = [
+			'posts_list'
+		];
+
 		if ( ! $this->installed() ) {
 			$Tmp = new dbJSON( $this->filenameDb );
 			$this->db = $Tmp->db;
@@ -121,30 +126,6 @@ class Posts_Lists extends Plugin {
 		$html .= ob_get_clean();
 
 		return $html;
-	}
-
-	/**
-	 * Head section
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return string Returns the head content.
-	 */
-	public function adminBodyEnd() {
-
-		// Access global variables.
-		global $L, $url;
-
-		// Settings page URL.
-		$settings = DOMAIN_ADMIN . 'configure-plugin/' . $this->className() . '#options';
-
-		if ( checkRole( [ 'admin' ], false ) && 'content' == $url->slug() ) {
-			return sprintf(
-				'<script>$( ".nav-tabs" ).before( "<div class=\'alert alert-primary alert-search-forms\' role=\'alert\'><p class=\'m-0\'><a href=\'%s\'>%s</a></p></div>");</script>',
-				$settings,
-				$L->get( 'Posts widget options' )
-			);
-		}
 	}
 
 	/**
@@ -260,5 +241,19 @@ class Posts_Lists extends Plugin {
 	// @return string
 	public function date_code() {
 		return $this->getValue( 'date_code' );
+	}
+
+	/**
+	 * Custom hook
+	 *
+	 * Prints the sidebar default list by
+	 * calling the `posts_list' hook.
+	 *
+	 * @since  1.0.0
+	 * @access private
+	 * @return string Returns the form markup.
+	 */
+	public function posts_list() {
+		return sidebar_list();
 	}
 }
