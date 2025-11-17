@@ -22,6 +22,16 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . $this->className();
 	margin: 0;
 	padding: 0;
 }
+.form-range-controls {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 1em;
+	width: 100%;
+	max-width: 640px;
+	margin: 0;
+	padding: 0;
+}
 </style>
 <div class="alert alert-primary alert-posts-lists" role="alert">
 	<p class="m-0"><?php $L->p( "Go to the <a href='{$guide_page}'>posts lists guide</a> page." ); ?></p>
@@ -99,6 +109,9 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . $this->className();
 					<option value="select" <?php echo ( $this->getValue( 'date_display' ) === 'select' ? 'selected' : '' ); ?>><?php $L->p( 'Dropdown Select' ); ?></option>
 				</select>
 				<small class="form-text"><?php $L->p( 'Show dates as simple list month/year headings or as a dropdown box to select month/year.' ); ?></small>
+				<?php if ( ! getPlugin( 'jQuery' ) ) : ?>
+				<small class="form-text"><?php $L->p( 'If posts do not display properly it may be that the active theme does not load jQuery. Try installing the <a href="https://github.com/Bludiot/jquery" target="_blank" rel="noopener noreferrer">jQuery plugin</a> for Bludit.' ); ?></small>
+				<?php endif; ?>
 			</div>
 		</div>
 
